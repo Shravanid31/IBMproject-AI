@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Buddy – Your AI Fitness Coach</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f0f9ff, #e0f7fa);
+      color: #264653;
+    }
+
+    header {
+      padding: 40px 60px;
+      background: linear-gradient(to right, #2a9d8f, #00b4d8);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 60px;
+      gap: 40px;
+    }
+
+    .left, .right {
+      flex: 1 1 400px;
+    }
+
+    .left h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #1d3557;
+    }
+
+    .left ul {
+      list-style: none;
+      line-height: 2em;
+      font-size: 1.1em;
+    }
+
+    .left ul li::before {
+      content: '✔️';
+      margin-right: 10px;
+      color: #2a9d8f;
+    }
+
+    .right img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .features {
+      padding: 40px 60px;
+      background-color: #ffffff;
+      margin-bottom: 60px; /* 👈 added space after features */
+    }
+
+    .features h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .feature {
+      background: #f1fdfb;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #1d3557;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #2a9d8f;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      header, .container, .features {
+        padding: 30px 20px;
+      }
+
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .feature img {
+        width: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fitness Buddy</h1>
+    <p>Your friendly, AI-powered health & fitness assistant. Always available. Always motivating. Always personalized.</p>
+  </header>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "f2ea1523-c43c-4abf-b737-9f5d7343c09d", // The ID of this integration.
+    region: "eu-gb", // The region your integration is hosted in.
+    serviceInstanceID: "4d8f91b3-bcb4-4c92-88ae-71464c8d47b1", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+  <div class="container">
+    <div class="left">
+      <h2>Why Fitness Buddy?</h2>
+      <ul>
+        <li>No expensive subscriptions or rigid schedules</li>
+        <li>Custom workouts you can do at home</li>
+        <li>AI-generated nutrition & meal suggestions</li>
+        <li>Daily motivation to keep you consistent</li>
+        <li>Tailored to your personal lifestyle and preferences</li>
+        <li>Powered by IBM Cloud Lite / Granite AI</li>
+      </ul>
+    </div>
+     </div>
+
+  <section class="features">
+    <h2>What Can Fitness Buddy Do?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Workout icon">
+        <h3>Home Workouts</h3>
+        <p>Get exercise routines customized to your fitness level and space at home.</p>
+      </div>
+
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Nutrition icon">
+        <h3>Meal Suggestions</h3>
+        <p>Discover quick, healthy meals tailored to your needs and preferences.</p>
+      </div>
+
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/4228/4228709.png" alt="Motivation icon">
+        <h3>Daily Motivation</h3>
+        <p>Stay inspired every day with curated tips, quotes, and challenges.</p>
+      </div>
+
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/3771/3771417.png" alt="Habit icon">
+        <h3>Build Habits</h3>
+        <p>Set goals and track your progress to create lasting fitness habits.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Fitness Buddy • Powered by IBM Cloud Lite and IBM Granite
+  </footer>
+
+</body>
+</html>
